@@ -13,7 +13,4 @@ class AdminPanelController extends Controller
 	public function countRows() {
      return Posts::where('id','>','1')->count();
 }
-    public function addItem() {
-    	
-}
 }
