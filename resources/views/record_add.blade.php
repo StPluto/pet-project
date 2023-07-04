@@ -15,7 +15,7 @@
   <h2 class="text-center">Record | Add</h2>
   <br>
   <form action = "/create" method = "POST" class="form-group" style="width:70%; margin-left:15%;">
-@csrf
+  	{{csrf_token();}}
     <label>Name:</label>
     <input type="text" class="form-control" placeholder="Name" name="name">
   <label>Description:</label>

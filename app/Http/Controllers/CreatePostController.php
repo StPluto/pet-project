@@ -7,14 +7,13 @@ use Illuminate\Http\Request;
 use DB;
 use App\Http\Requests;
 
-class DbInputController extends Controller
+class CreatePostController extends Controller
 {
     //
-    public function insertform(){
+    public function insertForm(){
         return view('record_add');
         }
         public function insert(Request $request){
-        $id = 1 + int(Posts::where('id','>','1')->count());
         $name = $request->input('name');
         $description = $request->input('description');
         $data=['id'=>$id,"name"=>$name,"description"=>$description];

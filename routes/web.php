@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\MainPageController;
 use App\Http\Controllers\AdminPanelController;
-use App\Http\Controllers\DbInputController;
+use App\Http\Controllers\CreatePostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,5 +18,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [MainPageController::class, 'list']);
 Route::get('/admin',[AdminPanelController::class, 'index']);
-Route::get('/insert',[DbInputController::class, 'insertform']);
-Route::post('/create',[DbInputController::class, 'insert']);
+Route::get('/insert',[CreatePostController::class, 'insertform']);
+Route::post('/create',[CreatePostController::class, 'insert']);
