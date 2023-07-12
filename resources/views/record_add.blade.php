@@ -20,6 +20,12 @@
     <input type="text" class="form-control" placeholder="Name" name="name">
   <label>Description:</label>
   <input type="text" class="form-control" placeholder="Description" name="description">
+  <select name="category_name">
+    @foreach($categories as $category)
+  <option value="{{$category->category_name}}">{{$category->category_name}}</option>
+    @endforeach
+  </select>
+    <br>
     <button type="submit"  value = "Add student" class="btn btn-primary">Submit</button>
   </form>
 </div>
