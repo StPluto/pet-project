@@ -16,8 +16,8 @@ class CreatePostController extends Controller
         public function insert(Request $request){
         $name = $request->input('name');
         $description = $request->input('description');
-        $data=['id'=>$id,"name"=>$name,"description"=>$description];
-        DB::table('posts')->insert($data);
+        $data=["name"=>$name,"description"=>$description];
+        DB::table('posts')->insertGetId($data);
         echo "Record inserted successfully.<br/>";
         echo '<a href = "/insert">Click Here</a> to go back.';
         }

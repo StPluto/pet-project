@@ -27,12 +27,12 @@
     <body class="antialiased">
         <h5>Welcome!</h5>
         <div>Последние объявления</div>
-        @for ($i = 0; $i < 4; $i++)
+        @foreach($posts as $post)
         <div class="box1">
-                <p> Объявление № {{$i}}</p>
-                <p> {{$posts[$i]->name}}</p>
-                <p font-size="12px"> {{$posts[$i]->description}}</p>
+                <p> Объявление № {{$post->id}}</p>
+                <p> {{$post->name}}</p>
+                <p font-size="12px"> {{$post->description}}</p>
         </div>
-        @endfor
+        @endforeach
     </body>
 </html>
