@@ -18,6 +18,7 @@
     </head>
     <body >
         <h1>Welcome!</h1>
+        <a href="{{ route('registrationForm')}}" >Регистрация</a>
         <div>Последние объявления</div>
         @foreach($posts as $post)
         <div class="box1">
@@ -27,5 +28,6 @@
                 <p font-size="22px"> {{$post->category_name}}</p>
         </div>
         @endforeach
+
     </body>
 </html>
