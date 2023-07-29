@@ -1,0 +1,26 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\View\View;
+
+class LoginController extends Controller
+{
+    public function index() : View {
+        return view('login');
+        
+    }
+
+    public function login(Request $request){
+        /* dd($request->all()); */
+
+        $request->validate([
+            'name' => ['required', 'string'],
+            'email' => ['required', 'string', 'email', 'unique:users'],
+            'password' => ['required', 'confirmed', 'min:8']
+        ]);
+
+
+}
+}

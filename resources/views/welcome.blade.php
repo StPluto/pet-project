@@ -1,33 +1,20 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('app')
+@section('content')
+    <div>
+        @extends('header')
+        @yield('header')
 
-        <title>Доска объявлений</title>
-        <!-- Styles -->
-        <style>
-            .box1 {
-                height: 256px;
-                width: 256px;
-                border: 5px solid orangered;
-                padding: 50px;
-                margin: 20px;
-                }
-        </style>
-    </head>
-    <body >
-        <h1>Welcome!</h1>
-        <a href="{{ route('registrationForm')}}" >Регистрация</a>
-        <div>Последние объявления</div>
+    </div>
+    <div class="posts">
+        <p>Последние объявления</p>
+
         @foreach($posts as $post)
-        <div class="box1">
-                <p> Объявление № {{$post->id}}</p>
-                <p> {{$post->name}}</p>
-                <p font-size="12px"> {{$post->description}}</p>
-                <p font-size="22px"> {{$post->category_name}}</p>
+        <div class="box">
+            <h3> Объявление № {{$post->id}}</h3>
+            <p> {{$post->name}}</p>
+            <p> {{$post->description}}</p>
+            <p> {{$post->category_name}}</p>
         </div>
         @endforeach
-
-    </body>
-</html>
+    </div>
+@endsection
