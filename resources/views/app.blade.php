@@ -140,6 +140,12 @@
             top: 40px;
             font-size: 42px;
         }
+        .insert-record-form{
+            position: absolute;
+            width: 100%;
+            top: 40px;
+            font-size: 32px;
+        }
     </style>
 </head>
 

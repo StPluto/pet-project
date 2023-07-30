@@ -1,7 +1,7 @@
 @extends('app')
 @section('content')
 
-<div class="container">
+<div class="insert-record-form">
   <form action = "/create" method = "POST" class="form-group" style="width:70%; margin-left:15%;">
   @csrf
     <label>Name:</label>
