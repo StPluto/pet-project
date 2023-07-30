@@ -67,17 +67,18 @@
         .form {
             width: 50%;
             height: 400px;
-            position: relative;
+            position: absolute;
+            margin-top: 40px;
             left: 25%;
             right: 25%;
 
         }
 
-        .form header {
+        .form h1 {
             font-size: 2rem;
             font-weight: 500;
             text-align: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 10px;
         }
 
         .form input {
@@ -133,6 +134,11 @@
 
         .signup label:hover {
             text-decoration: underline;
+        }
+        .posts-counter{
+            position: absolute;
+            top: 40px;
+            font-size: 42px;
         }
     </style>
 </head>

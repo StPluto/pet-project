@@ -1,5 +1,5 @@
 @extends('app')
 @section('content')
-<div>Количество постов</div>
-{{$count}}
+<div class="posts-counter">Количество постов : {{$count}}</div>
+
 @endsection

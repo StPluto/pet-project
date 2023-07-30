@@ -1,10 +1,5 @@
 @extends('app')
 @section('content')
-    <div>
-        @extends('header')
-        @yield('header')
-
-    </div>
     <div class="posts">
         <p>Последние объявления</p>
 

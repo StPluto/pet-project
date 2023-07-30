@@ -1,7 +1,7 @@
 @extends('app')
 @section('content')
 <div class="form">
-  <header>Sign up</header>
+  <h1>Sign up</h1>
   @foreach($errors->all() as $message)
   <p> Error : {{ $message }}</p>
   @endforeach

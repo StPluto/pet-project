@@ -1,7 +1,7 @@
 @extends('app')
 @section('content')
 <div class="form">
-    <header>Sign in</header>
+    <h1>Sign in</h1>
     <form action="/login" method="post">
       @csrf
       <div class="input-center">
