@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 class LoginController extends Controller
@@ -17,9 +18,12 @@ class LoginController extends Controller
 
         $request->validate([
             'name' => ['required', 'string'],
-            'email' => ['required', 'string', 'email', 'unique:users'],
-            'password' => ['required', 'confirmed', 'min:8']
+            'password' => ['required', 'string']
         ]);
+        if(Auth::attempt($request->only('name','password'))){
+            return redirect()->route('/');
+        }
+        return back()->withInput()->withErrors(['name' => 'Invalid login or password, try again']);
 
 
 }

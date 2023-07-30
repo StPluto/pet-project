@@ -6,6 +6,9 @@
       @csrf
       <div class="input-center">
         <input type="text" name="name" value="{{old('name')}}" placeholder="Enter your login">
+        @error('name')
+        {{ $message}}
+        @enderror
         <br>
         <input type="password" name="password" placeholder="Enter a password">
         <br>
