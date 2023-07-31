@@ -124,7 +124,7 @@
         .signup {
             font-size: 17px;
             text-align: center;
-            left: 10px;
+            margin-top: 20px;
         }
 
         .signup label {
@@ -145,6 +145,9 @@
             width: 100%;
             top: 40px;
             font-size: 32px;
+        }
+        .error-msg{
+            color: red;
         }
     </style>
 </head>
